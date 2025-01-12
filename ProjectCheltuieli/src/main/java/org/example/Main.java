@@ -5,6 +5,8 @@ import models.Income;
 import models.ExpenseManager;
 import java.time.LocalDate;
 import java.util.Scanner;
+import models.ProfitLossCalculator;
+import enums.FinancialResult;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,7 +23,8 @@ public class Main {
             System.out.println("5. View Total Incomes");
             System.out.println("6. Save Data");
             System.out.println("7. Load Data");
-            System.out.println("8. Exit");
+            System.out.println("8. Calculate Profit or Loss");
+            System.out.println("9. Exit");
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
@@ -96,6 +99,17 @@ public class Main {
                     break;
 
                 case 8:
+                    ProfitLossCalculator calculator = new ProfitLossCalculator(manager.getIncomes(), manager.getExpenses());
+                    FinancialResult result = calculator.calculateResult();
+                    System.out.println("======================");
+                    System.out.println("Financial Result: " + result);
+                    System.out.println("Total Income: " + calculator.getTotalIncome());
+                    System.out.println("Total Expense: " + calculator.getTotalExpense());
+                    System.out.println("Net Amount: " + calculator.getNetAmount());
+                    System.out.println("======================");
+                    break;
+
+                case 9:
                     running = false;
                     System.out.println("Goodbye!");
                     break;
