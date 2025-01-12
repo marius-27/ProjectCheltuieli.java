@@ -7,16 +7,16 @@ import models.Transactions;
 import java.util.List;
 
 public interface IExpenseManager {
-    // Adăugare tranzacție (cheltuială sau venit)
+    // Adaugare tranzactie (cheltuiala sau venit)
     void addTransaction(Transactions transaction);
 
-    // Obținere toate tranzacțiile
+    // Obtinere toate tranzactiile
     List<Transactions> getTransactions();
 
-    // Obținere toate cheltuielile
+    // Obtinere toate cheltuielile
     List<Expense> getExpenses();
 
-    // Obținere toate veniturile
+    // Obtinere toate veniturile
     List<Income> getIncomes();
 
     // Calcul total cheltuieli
@@ -28,6 +28,6 @@ public interface IExpenseManager {
     // Salvare date
     void saveData(String expensesFile, String incomesFile) throws Exception;
 
-    // Încărcare date
+    // Incarcare date
     void loadData(String expensesFile, String incomesFile) throws Exception;
 }

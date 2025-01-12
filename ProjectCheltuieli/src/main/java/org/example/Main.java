@@ -25,15 +25,15 @@ public class Main {
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine();
 
             switch (choice) {
-                case 1: // Add Expense
+                case 1:
                     System.out.print("Enter Expense ID: ");
                     String expenseId = scanner.nextLine();
                     System.out.print("Enter Amount: ");
                     double expenseAmount = scanner.nextDouble();
-                    scanner.nextLine(); // consume newline
+                    scanner.nextLine();
                     System.out.print("Enter Date (YYYY-MM-DD): ");
                     LocalDate expenseDate = LocalDate.parse(scanner.nextLine());
                     System.out.print("Enter Description: ");
@@ -46,12 +46,12 @@ public class Main {
                     System.out.println("Expense added successfully!");
                     break;
 
-                case 2: // Add Income
+                case 2:
                     System.out.print("Enter Income ID: ");
                     String incomeId = scanner.nextLine();
                     System.out.print("Enter Amount: ");
                     double incomeAmount = scanner.nextDouble();
-                    scanner.nextLine(); // consume newline
+                    scanner.nextLine();
                     System.out.print("Enter Date (YYYY-MM-DD): ");
                     LocalDate incomeDate = LocalDate.parse(scanner.nextLine());
                     System.out.print("Enter Description: ");
@@ -64,20 +64,20 @@ public class Main {
                     System.out.println("Income added successfully!");
                     break;
 
-                case 3: // View Transactions
+                case 3:
                     System.out.println("All Transactions:");
                     manager.getTransactions().forEach(System.out::println);
                     break;
 
-                case 4: // View Total Expenses
+                case 4:
                     System.out.println("Total Expenses: " + manager.calculateTotalExpenses());
                     break;
 
-                case 5: // View Total Incomes
+                case 5:
                     System.out.println("Total Incomes: " + manager.calculateTotalIncomes());
                     break;
 
-                case 6: // Save Data
+                case 6:
                     try {
                         manager.saveData("expenses.json", "incomes.json");
                         System.out.println("Data saved successfully!");
@@ -86,7 +86,7 @@ public class Main {
                     }
                     break;
 
-                case 7: // Load Data
+                case 7:
                     try {
                         manager.loadData("expenses.json", "incomes.json");
                         System.out.println("Data loaded successfully!");
@@ -95,7 +95,7 @@ public class Main {
                     }
                     break;
 
-                case 8: // Exit
+                case 8:
                     running = false;
                     System.out.println("Goodbye!");
                     break;

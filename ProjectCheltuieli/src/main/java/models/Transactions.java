@@ -51,7 +51,7 @@ public abstract class Transactions implements ITransactions {
         this.description = description;
     }
 
-    // Abstract method to be implemented by subclasses
+    //Metoda abstracta pentru implementare in alte clase(mostenire)
     public abstract void displayTransactionDetails();
 
     @Override

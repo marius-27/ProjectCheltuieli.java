@@ -14,17 +14,17 @@ public class ExpenseManager implements IExpenseManager {
         this.transactions = new ArrayList<>();
     }
 
-    // Metoda pentru a adăuga o tranzacție (cheltuială sau venit)
+    // Metoda pentru a adauga o tranzactie (cheltuiala sau venit)
     public void addTransaction(Transactions transaction) {
         transactions.add(transaction);
     }
 
-    // Metoda pentru a obține toate tranzacțiile
+    // Metoda pentru a obtine toate tranzacțiile
     public List<Transactions> getTransactions() {
         return new ArrayList<>(transactions);
     }
 
-    // Metoda pentru a obține toate cheltuielile
+    // Metoda pentru a obtine toate cheltuielile
     public List<Expense> getExpenses() {
         return transactions.stream()
                 .filter(transaction -> transaction instanceof Expense)
@@ -32,7 +32,7 @@ public class ExpenseManager implements IExpenseManager {
                 .collect(Collectors.toList());
     }
 
-    // Metoda pentru a obține toate veniturile
+    // Metoda pentru a obtine toate veniturile
     public List<Income> getIncomes() {
         return transactions.stream()
                 .filter(transaction -> transaction instanceof Income)
@@ -56,7 +56,7 @@ public class ExpenseManager implements IExpenseManager {
                 .sum();
     }
 
-    // Salvarea datelor în fișiere JSON
+    // Salvarea datelor in fisiere JSON
     public void saveData(String expensesFile, String incomesFile) throws Exception {
         List<Expense> expenses = getExpenses();
         List<Income> incomes = getIncomes();
@@ -65,7 +65,7 @@ public class ExpenseManager implements IExpenseManager {
         DataPersistence.saveIncomes(incomes, incomesFile);
     }
 
-    // Încărcarea datelor din fișiere JSON
+    // Incarcarea datelor din fisiere JSON
     public void loadData(String expensesFile, String incomesFile) throws Exception {
         List<Expense> loadedExpenses = DataPersistence.loadExpenses(expensesFile);
         List<Income> loadedIncomes = DataPersistence.loadIncomes(incomesFile);

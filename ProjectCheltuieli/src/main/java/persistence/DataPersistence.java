@@ -27,7 +27,7 @@ public class DataPersistence {
             Json.createWriter(writer).writeArray(arrayBuilder.build());
         }
 
-        System.out.println("Cheltuielile au fost salvate în " + fileName);
+        System.out.println("The expense was saved in " + fileName);
     }
 
     public static List<Expense> loadExpenses(String fileName) throws IOException {
@@ -46,7 +46,7 @@ public class DataPersistence {
                 expenses.add(new Expense(id, amount, date, description, category));
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Fișierul " + fileName + " nu a fost găsit. Lista va fi inițializată goală.");
+            System.out.println("File " + fileName + " not found. The list will be initialized empty.");
         }
 
         return expenses;
@@ -68,7 +68,7 @@ public class DataPersistence {
             Json.createWriter(writer).writeArray(arrayBuilder.build());
         }
 
-        System.out.println("Veniturile au fost salvate în " + fileName);
+        System.out.println("The income was saved in " + fileName);
     }
 
     public static List<Income> loadIncomes(String fileName) throws IOException {
@@ -87,7 +87,7 @@ public class DataPersistence {
                 incomes.add(new Income(id, amount, date, description, source));
             }
         } catch (FileNotFoundException e) {
-            System.out.println("Fișierul " + fileName + " nu a fost găsit. Lista va fi inițializată goală.");
+            System.out.println("File " + fileName + " not found. The list will be initialized empty.");
         }
 
         return incomes;

@@ -11,7 +11,7 @@ public class Income extends Transactions {
         this.source = source;
     }
 
-    // Getter and Setter for source
+    // Getter si Setter
     public String getSource() {
         return source;
     }

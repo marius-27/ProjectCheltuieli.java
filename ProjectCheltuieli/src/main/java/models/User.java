@@ -15,7 +15,7 @@ public class User implements IUser {
         this.email = email;
     }
 
-    // Getters and Setters
+    // Getteri si Setteri
     @Override
     public String getId() {
         return id;
