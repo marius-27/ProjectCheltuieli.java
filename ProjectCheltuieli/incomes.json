@@ -1,1 +1,30 @@
-[{"id":"32","amount":123123.0,"date":"2001-09-09","description":"efsdf","source":"sdfsdf"}]
+[
+  {
+    "id": "32",
+    "amount": 123123.0,
+    "date": "2001-09-09",
+    "description": "efsdf",
+    "source": "sdfsdf"
+  },
+  {
+    "id": "33",
+    "amount": 5000.0,
+    "date": "2023-01-15",
+    "description": "Bonus anual",
+    "source": "Job"
+  },
+  {
+    "id": "34",
+    "amount": 200.0,
+    "date": "2023-02-01",
+    "description": "Dob\u00e2nd\u0103 bancar\u0103",
+    "source": "Banc\u0103"
+  },
+  {
+    "id": "35",
+    "amount": 1500.0,
+    "date": "2023-03-10",
+    "description": "Venit freelancing",
+    "source": "Proiect"
+  }
+]

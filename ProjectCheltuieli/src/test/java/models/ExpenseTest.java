@@ -25,8 +25,8 @@ class ExpenseTest {
     void displayTransactionDetails() {
         Expense cheltuiala = new Expense("1", 100.0, LocalDate.of(2025, 1, 1), "Prânz la restaurant", "Mâncare");
         cheltuiala.displayTransactionDetails();
-        // Acest test verifică dacă metoda rulează fără erori.
-        // Pentru verificări detaliate, folosește un framework care poate captura output-ul din consolă (ex. System Rules).
+        // Acest test verifica daca metoda rulează fara erori.
+        // Pentru verificari detaliate, folosește un framework care poate captura output-ul din consola (ex. System Rules).
     }
 
     @Test
